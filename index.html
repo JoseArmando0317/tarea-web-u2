@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Prueba Sockets</title>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+</head>
+<body>
+<h1>Esperando reservas en tiempo real...</h1>
+<script>
+    const socket = io('http://localhost:3000');
+
+    socket.on('connect', () => {
+        console.log('Conectado al servidor WebSocket');
+    });
+
+    socket.on('nueva_reserva', (data) => {
+        alert('¡Nueva reserva recibida en tiempo real! Huésped: ' + data.huesped);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+### 1. Crear una nueva reserva (POST)
+POST http://localhost:3000/api/reservas
+Content-Type: application/json
+
+{
+  "huesped": "Jose Chiquito",
+  "habitacion": "Habitación Don César",
+  "fecha_entrada": "2026-11-15"
+}
+
+### 2. Obtener todas las reservas (GET)
+GET http://localhost:3000/api/reservas
